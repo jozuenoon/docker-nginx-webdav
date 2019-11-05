@@ -1,5 +1,8 @@
 #!/bin/bash
 
+chmod 775 /media
+chown www-data:www-data /media
+
 if [[ -n "$USERNAME" ]] && [[ -n "$PASSWORD" ]]
 then
 	htpasswd -bc /etc/nginx/htpasswd $USERNAME $PASSWORD
